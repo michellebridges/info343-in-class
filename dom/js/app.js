@@ -77,4 +77,3 @@ countColHeading.addEventListener("click", function() {
     render(BABYNAMES);
 });
 
-

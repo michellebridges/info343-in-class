@@ -36,3 +36,4 @@ boxFive.addEventListener("click", function() {
 		boxFive.style.height = boxFive.offsetHeight + 10 +"px";
 	}, 10);
 });
+	boxSix = document.getElementById('six');
