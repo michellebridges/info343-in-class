@@ -109,11 +109,8 @@ logValue("2016-10-27", formatAsDate);
  */
 var someNumber = 123456789;
 //logValue(...)
-
-
-
-
-
+logValue(someNumber, formatAsNumber);
+logValue(someNumber, formatAsCurrency);
 
 console.groupEnd();
 
@@ -190,12 +187,9 @@ console.log("property names:", propNames);
  * see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
  */
 
-
-
-
-
-
-
+propNames.forEach(function(valNames) {
+    console.log(valNames, "=", course[valNames]);
+});
 
 //FYI, this is essentially how the .forEach()
 //method on arrays is implemented:
@@ -351,6 +345,17 @@ console.log("Total count", formatAsNumber(totalCount));
  * just reverse the logic in your compare function.
  */
 
+males.sort(function(a, b) {
+    return b.count - a.count;
+});
+
+var mostPopMaleRecs = males.slice(0, 10);
+console.log("most popular male records", mostPopMaleRecs);
+var mostPopMaleNames = mostPopMaleRecs.map(function(record) {
+    return record.name;
+});
+console.log("Most popular names as array", mostPopMaleNames);
+console.log("Most popular names as single string", mostPopMaleNames.join(", "));
 
 
 /**
